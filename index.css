@@ -11,15 +11,120 @@
   --font-lexend: "Lexend Deca", sans-serif;
 }
 
+/* This will hide the content visually but available for screen readers */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
-  padding: 2rem 0rem;
   background-color: var(--very-dark-blue);
   justify-content: center;
   align-items: center;
 }
 
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 69.5rem;
+    height: 28rem;
+    background-color: var(--dark-saturated-blue);
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 0.5rem;
+  }
+
+  .image-container {
+    font-size: 0px;
+    line-height: 0;
+    flex: 1;
+    position: relative;
+  }
+
+  .image-desktop {
+    max-width: 38rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    height: 100%;
+  }
+
+  .image-mobile {
+    display: none;
+  }
+
+  .image-overlay {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: var(--soft-violet);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .content-container {
+    padding: 4.65rem 7rem 5rem 4.6rem;
+    flex: 1;
+  }
+
+  .title {
+    font-size: 2.225rem;
+    line-height: 1.2;
+    font-family: var(--font-inter);
+    font-weight: 700;
+    color: var(--transparent-white-heading);
+  }
+
+  .title-position {
+    margin-top: 0.5rem;
+  }
+
+  .highlight-text {
+    color: var(--soft-violet);
+  }
+
+  .description {
+    font-size: 0.9375rem;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    margin-top: 1.563rem;
+    word-spacing: 0px;
+    line-height: 1.6;
+    color: var(--transparent-white);
+  }
+
+  .stat-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4.75rem;
+    justify-content: space-between;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-family: var(--font-inter);
+    font-weight: 700;
+    color: var(--transparent-white-heading);
+  }
+
+  .stat-text {
+    font-size: 0.75rem;
+    margin-top: 0.625rem;
+    font-family: var(--font-lexend);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--transparent-white);
+    font-weight: 400;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .card {
@@ -33,12 +138,17 @@
     position: relative;
   }
 
-  .image {
+  .image-mobile {
     width: 100%;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     display: inherit;
   }
+
+  .image-desktop {
+    display: none;
+  }
+
   .image-overlay {
     width: 100%;
     height: 100%;
@@ -106,4 +216,14 @@
   .stat-margin-top {
     margin-top: 2.125rem;
   }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0px;
+  color: white;
+}
+
+a{
+  color: var(--soft-violet);
 }

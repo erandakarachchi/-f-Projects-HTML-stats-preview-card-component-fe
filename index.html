@@ -13,11 +13,13 @@
 
 <body>
   <main>
+    <h1 class="sr-only">Stats preview card component</h1>
     <div class="container">
       <div class="card">
 
         <div class="image-container">
-          <img src="./images/image-header-mobile.jpg" alt="header image" class="image" />
+          <img src="./images/image-header-mobile.jpg" alt="header image" class="image-mobile" />
+          <img src="./images/image-header-desktop.jpg" alt="header image" class="image-desktop" />
           <div class="image-overlay"></div>
         </div>
 
@@ -28,23 +30,32 @@
             experience, and overall efficiency.
           </p>
           <div class="stat-container">
-            <p class="stat-value">10k+</p>
-            <p class="stat-text"> companies </p>
-            <p class="stat-value stat-margin-top ">314</p>
-            <p class="stat-text"> templates </p>
-            <p class="stat-value stat-margin-top ">12M+</p>
-            <p class="stat-text"> queries </p>
+            <div>
+              <p class="stat-value">10k+</p>
+              <p class="stat-text"> companies </p>
+            </div>
+            <div>
+              <p class="stat-value stat-margin-top ">314</p>
+              <p class="stat-text"> templates </p>
+            </div>
+            <div>
+              <p class="stat-value stat-margin-top ">12M+</p>
+              <p class="stat-text"> queries </p>
+            </div>
+
           </div>
         </div>
-        
+
       </div>
+
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/erandakarachchi">Eranda K</a>.
     </div>
   </main>
   <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
+    
   </footer>
 </body>
 
